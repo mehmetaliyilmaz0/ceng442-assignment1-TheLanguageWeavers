@@ -145,10 +145,10 @@ We first tuned on a 200k-sentence sample with Optuna (`optuna_tune_embeddings.py
 
 **Final training settings**
 
-| Model     | vector_size | window | min_count | sg | negative | epochs | subword / notes                         |
-|-----------|-------------|--------|-----------|----|----------|--------|------------------------------------------|
-| Word2Vec  | 200         | 7      | 3         | 0  | 8        | 7     | defaults + Optuna JSON if present       |
-| FastText  | 150         | 3      | 3         | 1  | 12       | 8     | char n-grams 3–6, Optuna JSON if present |
+| Model     | vector_size | window | min_count | sg | negative | epochs |
+|-----------|-------------|--------|-----------|----|----------|--------|
+| Word2Vec  | 200         | 7      | 3         | 0  | 8        | 7     | 
+| FastText  | 150         | 3      | 3         | 1  | 12       | 8     | 
 
 ### 5.2 Evaluation metric
 
