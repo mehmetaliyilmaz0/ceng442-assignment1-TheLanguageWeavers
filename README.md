@@ -150,14 +150,6 @@ We first tuned on a 200k-sentence sample with Optuna (`optuna_tune_embeddings.py
 | Word2Vec  | 200         | 7      | 3         | 0  | 8        | 7     | defaults + Optuna JSON if present       |
 | FastText  | 150         | 3      | 3         | 1  | 12       | 8     | char n-grams 3–6, Optuna JSON if present |
 
-Rationale:
-- 150-200 dims is enough for mixed-domain AZ without blowing up model size.
-- window=7 for W2V captured broader co-occurrence context; FT’s smaller window=3 worked better with subwords.
-- min_count tuned lower for FT (2) since subword modeling can handle rare tokens better.
-- sg=0 (CBOW) turned out slightly better for W2V on this corpus, contrary to the skip-gram expectation.
-- negative=8-12 is a stable choice for both models.
-- epochs 7-8 is acceptable after cleaning.
-
 ### 5.2 Evaluation metric
 
 We followed the assignment’s line:
