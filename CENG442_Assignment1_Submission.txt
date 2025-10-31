@@ -1,0 +1,6 @@
+Repository: https://github.com/mehmetaliyilmaz0/ceng442-assignment1-TheLanguageWeavers 
+
+Group members:
+- Mehmet Ali Yılmaz 21050111057
+- Cemilhan Sağlam 21050111013
+- Muhammed Esat Çelebi 21050111034

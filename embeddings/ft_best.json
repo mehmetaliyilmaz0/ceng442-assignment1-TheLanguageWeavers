@@ -1,0 +1,9 @@
+{
+  "vector_size": 400,
+  "window": 3,
+  "min_count": 2,
+  "negative": 12,
+  "epochs": 6,
+  "min_n": 3,
+  "max_n": 6
+}

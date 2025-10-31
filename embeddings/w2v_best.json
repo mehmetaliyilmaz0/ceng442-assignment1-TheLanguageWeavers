@@ -1,0 +1,9 @@
+{
+  "vector_size": 400,
+  "window": 3,
+  "min_count": 2,
+  "sg": 0,
+  "negative": 6,
+  "epochs": 9,
+  "sample": 0.000644890235568275
+}
