@@ -179,15 +179,15 @@ Final run (`evaluate_embeddings.py`) printed:
 
 ```text
 Word2Vec (final):
-  syn_mean   = 0.7517177820205688
-  ant_mean   = 0.510276734828949
-  separation = 0.24144104719161985
-  coverage   = 0.977977153735768
+  syn_mean   = 0.700832462310791
+  ant_mean   = 0.4872073084115982
+  separation = 0.2136251538991928
+  coverage   = 0.9602835876317493
 
 FastText (final):
-  syn_mean   = 0.6342481315135956
-  ant_mean   = 0.4438013583421707
-  separation = 0.1904467731714249
+  syn_mean   = 0.5796155035495758
+  ant_mean   = 0.3785134293138981
+  separation = 0.20110207423567772
   coverage   = 0.977977153735768
 ```
 
@@ -214,9 +214,9 @@ This proves two things:
 ### 5.5 Synonym / Antonym probe (assignment-style)
 
 ```text
-Synonyms: W2V=0.775, FT=0.613
-Antonyms: W2V=0.621, FT=0.529
-Separation (Syn − Ant): W2V=0.154, FT=0.084
+Synonyms: W2V=0.701, FT=0.580
+Antonyms: W2V=0.487, FT=0.379
+Separation (Syn − Ant): W2V=0.214, FT=0.201
 ```
 
 These values are lower than the global ones above because this probe uses a **smaller and harder** list of Azerbaijani pairs where antonyms often co-occur in the same review sentences (“bahalı idi amma yaxşı idi”). Even in this harder setup the ordering stayed the same: **Word2Vec > FastText**.
