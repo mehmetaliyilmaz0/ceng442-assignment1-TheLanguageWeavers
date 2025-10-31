@@ -147,16 +147,16 @@ We first tuned on a 200k-sentence sample with Optuna (`optuna_tune_embeddings.py
 
 | Model     | vector_size | window | min_count | sg | negative | epochs | subword / notes                         |
 |-----------|-------------|--------|-----------|----|----------|--------|------------------------------------------|
-| Word2Vec  | 300         | 5      | 3         | 1  | 10       | 10     | defaults + Optuna JSON if present       |
-| FastText  | 300         | 5      | 3         | 1  | 10       | 10     | char n-grams 3–6, Optuna JSON if present |
+| Word2Vec  | 200         | 7      | 3         | 0  | 8        | 7     | defaults + Optuna JSON if present       |
+| FastText  | 150         | 3      | 3         | 1  | 12       | 8     | char n-grams 3–6, Optuna JSON if present |
 
 Rationale:
-- 300 dims is enough for mixed-domain AZ without blowing up model size.
-- window=5 balances local and sentence-level context.
-- min_count=3 removes typos and ultra-rare forms.
-- sg=1 (skip-gram) works better on noisy, mixed corpora.
-- negative=10 is a stable choice for both models.
-- epochs=10 is acceptable after cleaning.
+- 150-200 dims is enough for mixed-domain AZ without blowing up model size.
+- window=7 for W2V captured broader co-occurrence context; FT’s smaller window=3 worked better with subwords.
+- min_count tuned lower for FT (2) since subword modeling can handle rare tokens better.
+- sg=0 (CBOW) turned out slightly better for W2V on this corpus, contrary to the skip-gram expectation.
+- negative=8-12 is a stable choice for both models.
+- epochs 7-8 is acceptable after cleaning.
 
 ### 5.2 Evaluation metric
 
@@ -298,8 +298,8 @@ We made the run order explicit and deterministic.
 - We trained two Azerbaijani embedding models on a single, domain-aware corpus.
 - We added explicit domain tags at the beginning of every sentence to meet the assignment requirement and to enable per-domain analysis later.
 - **We implemented 4/5 mini-challenges in code** (hashtag split, emoji mapping, negation scope, simple deasciify) and **documented** the stopword research part without harming negation.
-- **Both** models reached **the same high coverage (~0.978)** on the cleaned assignment data.
-- Word2Vec delivered **higher semantic separation** in **both** the global metric (0.2414 vs 0.1904) **and** the harder assignment-style probe (0.154 vs 0.084).
+- **Both** models reached **the same high coverage (~0.97–0.98)** on the cleaned assignment data.
+- Word2Vec delivered higher semantic separation in both the global metric (0.214 vs 0.201) and the harder assignment-style probe (0.214 vs 0.201).
 - We skipped lemmatization because normalization + subword was already effective and reliable.
 
 ---
