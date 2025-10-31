@@ -308,7 +308,7 @@ We made the run order explicit and deterministic.
 
 The repository does **not** include the `embeddings/` directory because the files exceed GitHub’s size limits. All trained models were archived as a single ZIP and uploaded to Google Drive.
 
-**Download link:** <!-- put your Google Drive link here -->
+**Download link:** [<!-- put your Google Drive link here -->](https://drive.google.com/file/d/1aTdsRc8cPag4nZ7EZD6K69ma3_FhHcd8/view?usp=sharing)
 
 After downloading the ZIP, extract it to the project root so that you get:
 
@@ -343,5 +343,4 @@ python evaluate_embeddings.py
 
 but this will retrain both models on your machine.
 
-## Embedding link
-https://drive.google.com/file/d/1aTdsRc8cPag4nZ7EZD6K69ma3_FhHcd8/view?usp=sharing
+
