@@ -342,3 +342,6 @@ python evaluate_embeddings.py
 ```
 
 but this will retrain both models on your machine.
+
+## ) Embedding link
+https://drive.google.com/file/d/1aTdsRc8cPag4nZ7EZD6K69ma3_FhHcd8/view?usp=sharing
