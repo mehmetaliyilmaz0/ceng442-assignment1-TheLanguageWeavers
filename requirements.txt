@@ -1,0 +1,16 @@
+# Core data stack
+pandas>=2.0
+numpy>=1.26
+scipy>=1.12
+
+# Excel I/O
+openpyxl>=3.1
+
+# Text cleaning
+ftfy>=6.2.0
+
+# Embeddings
+gensim>=4.3.0
+
+# Hyperparameter tuning
+optuna>=3.6.0
